@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    background-color: rgba(128, 128, 128, 0.233);
+    height: 100%;
+    color: #333;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin: 5;
+    background-color: plum;
+    padding: 1rem;
+    width: 100%;
+}
+
+.main-container {
+    max-width: 1200px;
+    padding: 20px;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.main-container img {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.introduction {
+    padding: 10px 30px;
+    max-width: 800px;
+    
+}
+
+.introduction h1{
+    margin-bottom: 8px;
+    text-decoration: underline;
+}
+
+.introduction p{
+    margin-bottom: 15px;
+    text-align: justify;
+    width: 100%;
+}
+
+.guide-container {
+    max-width: 800px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .guide-container p{
+    font-size: 20;
+} */
+
+.guide-container h1 {
+    text-align: center;
+    font-size: 1.5rem; /* Increased font size */
+}
+
+.steps {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.step {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+/* Responsive Slider */
+.slider {
+    width: 100%; 
+    max-width: 800px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto; 
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    height: max-content;
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides article {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: max-content; 
+    max-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 10px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slides article img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+#slide-5 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+.slides article .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.slides article .description {
+    font-size: 1rem;
+    color: #555;
+    text-align: justify;
+}
+
+.slides article .description ul, .slides article .description ol {
+    list-style: none;
+    padding-left: 5;
+    margin: 0;
+    width: 100px;
+}
+
+.slides > article:not(:target) {
+    transform: scale(0.8); 
+}
+
+.slides > article:target {
+    transform: scale(1); 
+}
+
+.slider > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: rgb(250, 149, 237);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+
+.slider > a:active {
+    top: 1px;
+}
+
+.slider > a:focus {
+    background: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .guide-container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .slider {
+        max-width: 100%; /* Allow slider to be responsive */
+    }
+
+    .slides article {
+        grid-template-columns: 1fr; /* Ensure content is stacked */
+        max-width: 100%; /* Ensure full width on mobile */
+    }
+
+    .steps {
+        flex-direction: column; /* Stack the steps vertically on mobile */
+    }
+}
