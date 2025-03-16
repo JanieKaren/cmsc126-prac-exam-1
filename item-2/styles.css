@@ -329,7 +329,7 @@ button.close-sidebar {
 }
 
 .post-buttons li{
-    display: inline; /* Makes list items appear in a row */
+    display: inline;
     margin-right: 10px; 
     
 }
@@ -595,7 +595,7 @@ a.collapse{
 
 }
 
-@media screen and (max-width: 924px) {
+@media screen and (max-width: 1007px) {
     /* Supposed to be toggled when screen too small*/
     aside.sidebar {
         display: none; 
