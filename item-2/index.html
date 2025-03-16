@@ -5,6 +5,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Reddit</title>
             <link rel="stylesheet" href="styles.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         </head>
         <body>
             <header>
@@ -12,30 +13,30 @@
                     <a href="/" class="logo">
                         <img src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo-2005.png" alt="Reddit Logo" />
                     </a>
-                    <div class="header-right">
-                        <div class="account">
-                            <a href="#">7hyndred77,</a> you're back! 
-                            <a href="#">Preferences</a> 
-                            <span class="separator">|</span> 
-                            <a href="#">Logout</a> <span class="sad-face">:(</span>
-                        </div>
-                        <div class="account-buttons "><a href="#">1</a> New Msg</div>
-                        <div class="account-buttons ">
-                            <span><a href="#">53,211</a></span>Link
-                        </div>
-                        <div class="account-buttons ">
-                            <span><a href="#">4,211</a></span>Comments
-                        </div>
+                </div>
+                <div class="header-right">
+                    <div class="account">
+                        <a href="#">7hyndred77,</a> you're back! 
+                        <a href="#">Preferences</a> 
+                        <span class="separator">|</span> 
+                        <a href="#">Logout</a> <span class="sad-face">:(</span>
+                    </div>
+                    <div class="account-buttons"><a href="#">1</a> New Msg</div>
+                    <div class="account-buttons">
+                        <span><a href="#">53,211</a></span>Link
+                    </div>
+                    <div class="account-buttons">
+                        <span><a href="#">4,211</a></span>Comments
                     </div>
                 </div>
                 <div class="header-bottom">
                     <nav class="tab-menu">
                         <ul>
-                            <li class="selected"><a href="#">what's hot</a></li>
-                            <li><a href="#">new</a></li>
-                            <li><a href="#">controversial</a></li>
-                            <li><a href="#">top</a></li>
-                            <li><a href="#">saved</a></li>
+                            <li><a href="#" tabindex="0">what's hot</a></li>
+                            <li><a href="#" tabindex="0" >new</a></li>
+                            <li><a href="#" tabindex="0">controversial</a></li>
+                            <li><a href="#" tabindex="0">top</a></li>
+                            <li><a href="#" tabindex="0">saved</a></li>
                         </ul>
                     </nav>
                     <form class="search-form" role="search">
@@ -45,60 +46,59 @@
                 </div>
                 
             </header>
-            <aside class="sidebar">
-                <button class="close-sidebar">
-                    <i class="fas fa-angle-double-left"></i> 
-                </button>
-                <ul>
-                    <li><a href="#">📰 Front Page</a></li>
-                    <li><a href="#">📷 Pics</a></li>
-                    <li><a href="#">🧪 Science</a></li>
-                    <li><a href="#">💻 Technology</a></li>
-                    <li><a href="#">❔ Ask Reddit</a></li>
-                    <li><a href="#">😆 Funny</a></li>
-                    <li><a href="#">⁉️ WTF</a></li>
-                    <li class="selected"><a href="#">📰 IAMA</a></li>
-                    <li><a href="#">📰 World News</a></li>
-                    <li><a href="#">📰 TodayILearned</a></li>
-                    <li><a href="#">📰 World News</a></li>
-                    <li class="more"><a href="#">(More)</a></li>
-                </ul>
-                <div class="siderbar-bottom">
-                    <section class="sidebar-sections">
-                        <h4><a href="#">Submit a Link</a></h4>
-                        <p>
-                            to anything interesting, news article, blog entry, video, picture...
-                        </p>
-                    </section>
-                    <section class="sidebar-sections">
-                        <h4><a href="#">Create a Community</a></h4>
-                        <p>
-                            ...for LARPing community
-                        </p>
-                        <p>
-                            ...because nothing in life is free (except reddits!)
-                        </p>
-                        <p>
-                            here on the side
-                        </p>
-                    </section>
-                    <div class="ad">
-                        <img src="https://i.pinimg.com/236x/e4/b3/05/e4b3052999393732b1b0eabb259871f7.jpg" alt="Advertisement">
-                        <p>tiniest ad in the world</p>
-                    </div>
-                </div>
-                
-            </aside>
             <main>
+                <aside class="sidebar">
+                    <button class="close-sidebar">
+                        <i class="fas fa-angle-double-left"></i> 
+                    </button>
+                    <nav class="sidetabs">
+                        <a href="#">📰 Front Page</a>
+                        <a href="#">📷 Pics</a>
+                        <a href="#">🧪 Science</a>
+                        <a href="#">💻 Technology</a>
+                        <a href="#">❔ Ask Reddit</a>
+                        <a href="#">😆 Funny</a>
+                        <a href="#">⁉️ WTF</a>
+                        <a href="#" class="selected">📰 IAMA</a>
+                        <a href="#">📰 World News</a>
+                        <a href="#">📰 TodayILearned</a>
+                        <a href="#">📰 World News</a>
+                        <a href="#" class="more">(More)</a>
+                    </nav>
+                    <div class="siderbar-bottom">
+                        <section class="sidebar-sections">
+                            <h4><a href="#">Submit a Link</a></h4>
+                            <p>
+                                to anything interesting, news article, blog entry, video, picture...
+                            </p>
+                        </section>
+                        <section class="sidebar-sections">
+                            <h4><a href="#">Create a Community</a></h4>
+                            <p>
+                                ...for LARPing community
+                            </p>
+                            <p>
+                                ...because nothing in life is free (except reddits!)
+                            </p>
+                            <p>
+                                here on the side
+                            </p>
+                        </section>
+                        <div class="ad">
+                            <img src="https://i.pinimg.com/236x/e4/b3/05/e4b3052999393732b1b0eabb259871f7.jpg" alt="Advertisement">
+                            <p>tiniest ad in the world</p>
+                        </div>
+                    </div>  
+                </aside>
                 <div class = "left-section">
                     <ul>
                         <li>
                             <article class = "post">
                                 <span class = "rank"> 1 </span>
                                 <div class="vote-container" >
-                                    <button class="vote">&#9650;</button>
+                                    <button class="upvote">&#9650;</button>
                                     <span class="vote-count">123</span>
-                                    <button class="vote">&#9660;</button>
+                                    <button class="downvote">&#9660;</button>
                                 </div>
                                 <div class="post-image">
                                     <img src="https://media.newyorker.com/photos/665f65409ad64d9e7a494208/4:3/w_1003,h_752,c_limit/Chayka-screenshot-06-05-24.jpg" alt="Post Image">
@@ -127,9 +127,9 @@
                             <article class = "post">
                                 <span class = "rank"> 2 </span>
                                 <div class="vote-container" >
-                                    <button class="vote upvoted">&#9650;</button>
+                                    <button class="upvote upvoted">&#9650;</button>
                                     <span class="vote-count upvoted">123</span>
-                                    <button class="vote">&#9660;</button>
+                                    <button class="downvote">&#9660;</button>
                                 </div>
                                 <div class="post-image">
                                     <img src="https://media.newyorker.com/photos/665f65409ad64d9e7a494208/4:3/w_1003,h_752,c_limit/Chayka-screenshot-06-05-24.jpg" alt="Post Image">
@@ -157,11 +157,11 @@
                         <li>
                             <article class = "post">
                                 <span class = "rank"> 3 </span>
-                                <div class="vote-container" >
-                                    <button class="vote">&#9650;</button>
-                                    <span class="vote-count">123</span>
-                                    <button class="vote">&#9660;</button>
-                                </div>
+                                    <div class="vote-container" >
+                                        <button class="upvote">&#9650;</button>
+                                        <span class="vote-count">123</span>
+                                        <button class="downvote">&#9660;</button>
+                                    </div>
                                 <div class="the-post">
                                     <h4 class="title">
                                         <a class="post-title" href="#">What do you call 60 guys watching the Super Bowl at home?</a>
@@ -186,9 +186,9 @@
                             <article class = "post">
                                 <span class = "rank"> 4 </span>
                                 <div class="vote-container" >
-                                    <button class="vote">&#9650;</button>
+                                    <button class="upvote">&#9650;</button>
                                     <span class="vote-count downvoted">123</span>
-                                    <button class="vote downvoted">&#9660;</button>
+                                    <button class="downvote downvoted">&#9660;</button>
                                 </div>
                                 <div class="post-image">
                                     <img src="https://media.newyorker.com/photos/665f65409ad64d9e7a494208/4:3/w_1003,h_752,c_limit/Chayka-screenshot-06-05-24.jpg" alt="Post Image">
@@ -217,9 +217,9 @@
                             <article class = "post">
                                 <span class = "rank"> 5 </span>
                                 <div class="vote-container" >
-                                    <button class="vote">&#9650;</button>
+                                    <button class="upvote">&#9650;</button>
                                     <span class="vote-count downvoted">123</span>
-                                    <button class="vote downvoted">&#9660;</button>
+                                    <button class="downvote downvoted">&#9660;</button>
                                 </div>
                                 <div class="post-image">
                                     <img src="https://media.newyorker.com/photos/665f65409ad64d9e7a494208/4:3/w_1003,h_752,c_limit/Chayka-screenshot-06-05-24.jpg" alt="Post Image">
@@ -297,8 +297,8 @@
                                 <article class="comment-container">
                                     <div class="comment">
                                         <div class="vote-container">
-                                            <button class="vote upvoted">&#9650;</button> 
-                                            <button class="vote">&#9660;</button>
+                                            <button class="upvote upvoted">&#9650;</button> 
+                                            <button class="downvote">&#9660;</button>
                                         </div>
                                         <div class = "comment-body">
                                             <div class="comment-header">
@@ -324,8 +324,8 @@
                                             <li>
                                                 <div class="comment">
                                                     <div class="vote-container">
-                                                        <button class="vote">&#9650;</button> 
-                                                        <button class="vote">&#9660;</button>
+                                                        <button class="upvote">&#9650;</button> 
+                                                        <button class="downvote">&#9660;</button>
                                                     </div>
                                                     <div class = "comment-body">
                                                         <div class="comment-header">
@@ -351,8 +351,8 @@
                                             <li>
                                                 <div class="comment">
                                                     <div class="vote-container">
-                                                        <button class="vote upvoted">&#9650;</button> 
-                                                        <button class="vote">&#9660;</button>
+                                                        <button class="upvote upvoted">&#9650;</button> 
+                                                        <button class="downvote">&#9660;</button>
                                                     </div>
                                                     <div class = "comment-body">
                                                         <div class="comment-header">
@@ -381,8 +381,8 @@
                                                 <li>
                                                     <div class="comment">
                                                         <div class="vote-container">
-                                                            <button class="vote">&#9650;</button> 
-                                                            <button class="vote">&#9660;</button>
+                                                            <button class="upvote">&#9650;</button> 
+                                                            <button class="downvote">&#9660;</button>
                                                         </div>
                                                         <div class = "comment-body">
                                                             <div class="comment-header">
@@ -417,8 +417,8 @@
                                 <article class="comment-container">
                                     <div class="comment">
                                         <div class="vote-container">
-                                            <button class="vote">&#9650;</button> 
-                                            <button class="vote downvoted">&#9660;</button>
+                                            <button class="upvote">&#9650;</button> 
+                                            <button class="downvote downvoted">&#9660;</button>
                                         </div>
                                         <div class = "comment-body">
                                             <div class="comment-header">
