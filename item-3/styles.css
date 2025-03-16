@@ -121,7 +121,7 @@ h2{
     position: relative;
     border-radius: 10px;
     width: 100%;
-    height: 500px; /* Adjust height as needed */
+    height: 500px; 
     overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -138,14 +138,13 @@ h2{
     padding: 20px;
     opacity: 0;
     transition: opacity 0.5s ease;
-    display: none; /* Hide all slides by default */
     background-color: rgba(190, 153, 153, 0.8);
 }
 
 
 .slides article img {
-    grid-row: 1 / span 5; /* Image spans two rows */
-    width: 100%; /* Image takes full width of its column */
+    grid-row: 1 / span 5; 
+    width: 100%; 
     height:max-content;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -163,19 +162,19 @@ h2{
 }
 
 .slides article .title {
-    grid-column: 2; /* Title in the second column */
-    grid-row: 1; /* Title in the first row */
+    grid-column: 2; 
+    grid-row: 1; 
     font-size: 1.5rem;
     font-weight: bold;
     margin: 10px;
-    text-align: center; /* Center the title */
+    text-align: center; 
     text-wrap: wrap;
 }
 
 .slides article .description{
     display: flexs;
-    grid-column: 2; /* Description in the second column */
-    grid-row: 2; /* Description in the second row */
+    grid-column: 2; 
+    grid-row: 2; 
     font-size: 1rem;
     color: #555;
     text-align: justify;
@@ -208,8 +207,8 @@ h2{
   }
 
 .slides article ul, .slides article ol {
-    grid-column: 2; /* List in the second column */
-    grid-row: 3; /* List in the third row */
+    grid-column: 2; 
+    grid-row: 3;
     list-style:circle;
     padding-inline-start: 30px;
     width: 90%;
@@ -290,16 +289,16 @@ footer {
         column-gap: 10px;
     }
     .slides > article:target {
-        display: flex; /* Ensure grid display */
+        display: flex; 
         flex-direction: column;
-        justify-items: center; /* Center image */
+        justify-items: center; 
         
     }
     .slides article img {
-        width:auto; /* Adjust width dynamically */
-        max-width: 90%; /* Prevent overflow */
+        width:auto; 
+        max-width: 90%;
         height: 80%;
-        display: block; /* Ensure it's visible */
+        display: block; 
         align-items: center;
         margin: 10px;
     }
