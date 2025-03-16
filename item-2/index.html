@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Reddit</title>
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -10,19 +10,29 @@
     <body>
         <header>
             <div class="header-top">
-                <div id="header-left">
-                    <a href="/" class="logo">
-                        <img src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo-2005.png" alt="Reddit Logo" />
-                    </a>
-                </div>
-                <div id="header-right">
-                    <a href="#" id="account">My Account</a>
+                <a href="/" class="logo">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo-2005.png" alt="Reddit Logo" />
+                </a>
+                <div class="header-right">
+                    <div class="account">
+                        <span><a href="#">7hyndred77,</a></span>you're back!
+                        <span><a href="#">preferences</a></span>
+                        <span class="separator">|</span>
+                        <span><a href="#">log out</a></span>:(
+                    </div>
+                    <div class="account-buttons "><a href="#">1</a> New Msg</div>
+                    <div class="account-buttons ">
+                        <span><a href="#">53,211</a></span>Link
+                    </div>
+                    <div class="account-buttons ">
+                        <span><a href="#">4,211</a></span>Comments
+                    </div>
                 </div>
             </div>
             <div class="header-bottom">
                 <nav class="tab-menu">
                     <ul>
-                        <li><a href="#">what's hot</a></li>
+                        <li class="selected"><a href="#">what's hot</a></li>
                         <li><a href="#">new</a></li>
                         <li><a href="#">controversial</a></li>
                         <li><a href="#">top</a></li>
@@ -39,61 +49,217 @@
 
         <div class="main-container">
             <aside class="sidebar">
-                <button id="close-btn">
-                    <i class="fas fa-angle-double-left"></i> <!-- Close Icon (Top-Right) -->
+                <button class="close-sidebar">
+                    <i class="fas fa-angle-double-left"></i> 
                 </button>
                 <ul>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Front Page</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Pics</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Science</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Technology</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Ask Reddit</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Funny</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> WTF</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> World News</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> World News</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> World News</a></li>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> World News</a></li>
+                    <li><a href="#">📰 Front Page</a></li>
+                    <li><a href="#">📷 Pics</a></li>
+                    <li><a href="#">🧪 Science</a></li>
+                    <li><a href="#">💻 Technology</a></li>
+                    <li><a href="#">❔ Ask Reddit</a></li>
+                    <li><a href="#">😆 Funny</a></li>
+                    <li><a href="#">⁉️ WTF</a></li>
+                    <li class="selected"><a href="#">📰 IAMA</a></li>
+                    <li><a href="#">📰 World News</a></li>
+                    <li><a href="#">📰 TodayILearned</a></li>
+                    <li><a href="#">📰 World News</a></li>
+                    <li class="more"><a href="#">(More)</a></li>
                 </ul>
+                <div class="siderbar-bottom">
+                    <section class="sidebar-sections">
+                        <h4><a href="#">Submit a Link</a></h4>
+                        <p>
+                            to anything interesting, news article, blog entry, video, picture...
+                        </p>
+                    </section>
+                    <section class="sidebar-sections">
+                        <h4><a href="#">Create a Community</a></h4>
+                        <p>
+                            ...for LARPing community
+                        </p>
+                        <p>
+                            ...because nothing in life is free (except reddits!)
+                        </p>
+                        <p>
+                            here on the side
+                        </p>
+                    </section>
+                    <div class="ad">
+                        <img src="https://i.pinimg.com/236x/e4/b3/05/e4b3052999393732b1b0eabb259871f7.jpg" alt="Advertisement">
+                        <p>tiniest ad in the world</p>
+                    </div>
+                </div>
                 
             </aside>
             <main class="content">
                <section class = "left-section">
-                <article class = "post">
-                    <p class = "rank"> 1 </p>
-                    <div class="vote-container">
-                        <button class="vote-button">▲</button>
-                        <span class="vote-count">123</span>
-                        <button class="vote-button">▼</button>
+                <ul>
+                    <li>
+                        <article class = "post">
+                            <span class = "rank"> 1 </span>
+                            <div class="vote-container" >
+                                <button class="vote upvoted">&#9650;</button> <!-- Upvote Arrow -->
+                                <span class="vote-count downvoted">123</span>
+                                <button class="vote">&#9660;</button>
+                            </div>
+                            <div class="post-image">
+                                <img src="https://media.newyorker.com/photos/665f65409ad64d9e7a494208/4:3/w_1003,h_752,c_limit/Chayka-screenshot-06-05-24.jpg" alt="Post Image">
+                            </div>
+                            <div class="the-post">
+                                <div class="title">
+                                    <a class="post-title" href="#">What do you call 60 guys watching the Super Bowl at home?</a>
+                                    <span class="domain">
+                                        (<a href="#">cnn.com</a>)
+                                    </span>
+                                </div>
+                                <span class="poster">sumbitted 19 hours ago by <a href='#' class="poster">krispykrackers</a></span>
+                                <ul class = "post-buttons">
+                                    <li><a href="#"> 623 comments</a></li>
+                                    <li><a href="#"> share</a></li>
+                                    <li><a href="#"> save</a></li>
+                                    <li><a href="#"> hide</a></li>
+                                    <li><a href="#"> report</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                
+               </section>
+               <section class = "right-section">
+                <article class="reddit-post">
+                    <div class="title">
+                        <a class="post-title" href="#">What do you call 60 guys watching the Super Bowl at home?</a>
+                        <span class="domain">
+                            (<a href="#">cnn.com</a>)
+                        </span>
+                    <p class="link">http://google.com</p>
                     </div>
-                    <div class="the-post">
-                        <div class = 'title'>
-                            <h4 href ="#">What do you call 60 guys watching the Super Bowl at home?</h4>
-                            <p class ="link">(cnn.com)</p>
+                    <div class ="description">
+                        <div class="points">
+                            <div class ="percentage">
+                                <span class="points-number">232</span>
+                                <span class="points-text">points</span>
+                                <span>(71% like it)</span>
+                            </div>
+                            <div>
+                                <p class="upvoted">390 up votes</p>
+                                <p class="downvoted">158 down votes</p>
+                            </div>
                         </div>
-                        <div class = 'sumbission'>
-                            <p>sumbitted 19 hours ago by </p>
-                            <a href='#'>krispykrackers</a>
-                        </div>
-                        
-                        
-                        <div class = "post-buttons">
-                            <div class = "post-button" role="button">623 comments</div>
-                            <div class = "post-button" role="button">share</div>
-                            <div class = "post-button" role="button">save</div>
-                            <div class = "post-button" role="button">hide</div>
-                            <div class = "post-button" role="button">report</div>
+                        <div class="submission">
+                            <p>submitted on 01 Feb 2011</p>
+                            <ul class = "post-buttons">
+                                <li><a href="#"> 200 comments</a></li>
+                                <li><a href="#"> sort by</a></li>
+                            </ul>
+
                         </div>
                     </div>
                 </article>
-               </section>
-               <section class = "right-section">
-                <h2>YAAAA Section</h2>
-                <p>This is the FADAFAleft section of the main content.</p>
+                <div class="comments-sections">
+                    <div class = "comment-box">
+                        <form class="comment-form" role="Comment">
+                            <div class="input-group">
+                                <input id="comment" aria-label="Comment"></input>
+                                <button type="submit" aria-label="Save">Save</button>
+                            </div>
+                            <a href="#">formatting help</a>
+                        </form>
+                        
+                        
+                    </div>
+                    <ul>
+                        <li>
+                            <article class="comment-container">
+                                <div class="comment">
+                                    <div class="vote-container">
+                                        <button class="vote">&#9650;</button> 
+                                        <button class="vote">&#9660;</button>
+                                    </div>
+                                    <div class = "comment-body">
+                                        <a href="#" class="username">krispykrackers</a>
+                                        <span class="poster">47 points </span>
+                                        <span class="poster">21 hours ago</span>
+                                        <span><a href="#">[-]</a></span>
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Nulla facilisi.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Nulla facilisi.</p>
+                                        <ul class = "post-buttons">
+                                            <li><a href="#"> permalink</a></li>
+                                            <li><a href="#"> report</a></li>
+                                            <li><a href="#"> reply</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <ul class="replies">
+                                    <li>
+                                        <article class="comment-container">
+                                            <div class="comment">
+                                                <div class="vote-container">
+                                                    <button class="vote">&#9650;</button> 
+                                                    <button class="vote">&#9660;</button>
+                                                </div>
+                                                <div class = "comment-body">
+                                                    <a href="#" class="username">krispykrackers</a>
+                                                    <span class="poster">47 points </span>
+                                                    <span class="poster">21 hours ago</span>
+                                                    <span><a href="#">[-]</a></span>
+                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit. Nulla facilisi.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit. Nulla facilisi.</p>
+                                                    <ul class = "post-buttons">
+                                                        <li><a href="#"> permalink</a></li>
+                                                        <li><a href="#"> parent</a></li>
+                                                        <li><a href="#"> report</a></li>
+                                                        <li><a href="#"> reply</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li>
+                                        <article class="comment-container">
+                                            <div class="comment">
+                                                <div class="vote-container">
+                                                    <button class="vote">&#9650;</button> 
+                                                    <button class="vote">&#9660;</button>
+                                                </div>
+                                                <div class = "comment-body">
+                                                    <a href="#" class="username">krispykrackers</a>
+                                                    <span class="poster">47 points </span>
+                                                    <span class="poster">21 hours ago</span>
+                                                    <span><a href="#">[-]</a></span>
+                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit. Nulla facilisi.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit. Nulla facilisi.</p>
+                                                    <ul class = "post-buttons">
+                                                        <li><a href="#"> permalink</a></li>
+                                                        <li><a href="#"> parent</a></li>
+                                                        <li><a href="#"> report</a></li>
+                                                        <li><a href="#"> reply</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </article>
+                           
+                        
+                        </li>
+                    </ul>
+                    
+                </div>
+
                </section>
             </main>
         </div>
-
         
     </body>
+
 </html>
