@@ -90,8 +90,8 @@ header{
 }
 
 .sidebar ul {
-    list-style: none; 
-    padding-left: 0;
+    list-style: circle; 
+    padding-inline-start: 40px;
     margin: 0;
 }
 .sidebar ul li{

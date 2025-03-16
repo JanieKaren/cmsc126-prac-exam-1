@@ -1,230 +1,314 @@
-* {
+/* Basic Styling */
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 80vh;
-    background-color: rgba(128, 128, 128, 0.233);
-    height: 100%;
-    color: #333;
-    align-items: center;
-}
-
-header {
-    text-align: center;
-    margin: 5;
-    background-color: plum;
-    padding: 1rem;
-    width: 100%;
-}
-
-.main-container {
-    max-width: 1200px;
-    padding: 20px;
-    align-items: center;
     background-color: #f4f4f4;
 }
 
-.main-container img {
-    width: 100%;
-    height: 500px; 
-    object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
 }
 
-.introduction {
-    padding: 10px 30px;
+main {
     max-width: 800px;
-    
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.introduction h1{
-    margin-bottom: 8px;
-    text-decoration: underline;
+section {
+    margin-bottom: 2rem;
 }
 
-.introduction p{
-    margin-bottom: 15px;
-    text-align: justify;
+h1, h2, h4 {
+    font-weight: 700;
+}
+h2{
+    text-align: center;
+}
+
+/* Hero Section */
+.hero img {
     width: 100%;
+    height: auto;
 }
 
 .guide-container {
     max-width: 800px;
-    margin: 20px;
+    margin: 20px auto; /* Center the container horizontally */
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    height: 600px;
 }
-
-/* .guide-container p{
-    font-size: 20;
-} */
 
 .guide-container h1 {
     text-align: center;
     font-size: 1.5rem; /* Increased font size */
 }
 
-.steps {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.step {
-    flex-shrink: 0;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: none;
-}
-
-/* Responsive Slider */
+/* Slider Styling */
 .slider {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
     width: 100%; 
     max-width: 800px;
     text-align: center;
-    overflow: hidden;
-    margin: 0 auto; 
-    position: relative;
+    margin: 0 auto; /* For positioning navigation buttons */
+    display: flex;
+    justify-content: center; /* Space buttons evenly */
+    align-items: center;
+    column-gap: 5px;
+}
+
+.slider button:hover {
+    background-color: #ddd;
+}
+
+.slider button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Add these styles for navigation */
+.slider .prev {
+    margin-right: 10px; /* Add some spacing */
+}
+
+.slider .next {
+    margin-left: 10px; /* Add some spacing */
+}
+
+
+.slider ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation buttons */
+}
+
+.slider li {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider li a {
+    text-decoration: none;
+    color: #333;
+    display: block; /* Make the link clickable */
+    width: 100%; /* Ensure the link covers the entire button */
+    height: 100%; /* Ensure the link covers the entire button */
+}
+
+.slider li a:hover {
+    background-color: #ddd;
+}
+
+.slider li a:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.slider li.active a {
+    background-color: #333;
+    color: #fff;
 }
 
 .slides {
-    display: flex;
-    overflow-x: hidden;
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 550px; /* Adjust height as needed */
+    overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    height: max-content;
 }
 
-.slides::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-.slides::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
-}
-
-.slides::-webkit-scrollbar-track {
-    background: transparent;
-}
 
 .slides article {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    width: 100%;
-    height: max-content; 
-    max-height: 700px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr 1fr;
-    gap: 10px;
-    border-radius: 10px;
-    background: #eee;
-    transform-origin: center center;
-    transform: scale(1);
-    transition: transform 0.5s;
     position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
     padding: 20px;
-    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: none; /* Hide all slides by default */
+    background-color: rgba(190, 153, 153, 0.8);
+}
+
+.slides article.active {
+    opacity: 1; /* Show the active slide */
+    display: block; /* Ensure the active slide is displayed */
+    
 }
 
 .slides article img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%; 
-    height: auto; 
+    grid-row: 1 / span 5; /* Image spans two rows */
+    width: 100%; /* Image takes full width of its column */
+    height:max-content;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
 }
 
 #slide-5 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%; 
+    width:100%; 
     height: auto; 
     border-radius: 10px;
 }
 
 .slides article .title {
+    grid-column: 2; /* Title in the second column */
+    grid-row: 1; /* Title in the first row */
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 10px;
+    margin: 10px;
+    text-align: center; /* Center the title */
 }
 
-.slides article .description {
+.slides article .description{
+    display: flexs;
+    grid-column: 2; /* Description in the second column */
+    grid-row: 2; /* Description in the second row */
     font-size: 1rem;
     color: #555;
     text-align: justify;
+    padding-right: 15px;
+    margin: 10px;
 }
 
-.slides article .description ul, .slides article .description ol {
-    list-style: none;
-    padding-left: 5;
-    margin: 0;
-    width: 100px;
+.slides figcaption {
+    grid-column: 1 / span 2; /* Caption spans both columns */
+    grid-row: 4; /* Caption in the third row */
+    text-align: center; /* Center the caption */
 }
 
+
+.slides article ul, .slides article ol {
+    grid-column: 2; /* List in the second column */
+    grid-row: 3; /* List in the third row */
+    list-style:circle;
+    padding-inline-start: 30px;
+    width: 90%;
+    text-align: left;
+    color: #555;
+}
+
+/* Keep the original scaling transition */
 .slides > article:not(:target) {
     transform: scale(0.8); 
 }
 
 .slides > article:target {
+    max-height: 400px; /* Set a maximum height for articles */
+    overflow-y: auto; /* Enables vertical scrolling */
     transform: scale(1); 
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Two columns: 1 for image, 2 for text */
+    grid-template-rows: max-content max-content max-content ; /* Rows: image, description, caption */
+    gap: 10px; /* Spacing between grid items */
+    
 }
 
+.slides .ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: circle;
+    padding: 0;
+    margin: 15px;
+    padding-inline-start: 20px;
+  }
+  
+  .slides .ingredient-list li {
+    width: 48%;
+    margin-bottom: 2px;    
+  }
+  
+  .slides .ingredient-name {
+    font-weight: bold;
+  }
+  
+  .slides .ingredient-description {
+    margin-left: 10px;
+  }
+  
+
+/* Styling for the navigation buttons */
 .slider > a {
     display: inline-flex;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: rgb(250, 149, 237);
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
     text-decoration: none;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     margin: 0 0 0.5rem 0;
     position: relative;
+    line-height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .slider > a:active {
     top: 1px;
+    
 }
 
 .slider > a:focus {
-    background: #000;
+    background-color: #333;
 }
 
-/* Responsive Design */
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
-    .main-container {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-
-    .guide-container {
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
-
     .slider {
-        max-width: 100%; /* Allow slider to be responsive */
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 10px;
     }
-
-    .slides article {
-        grid-template-columns: 1fr; /* Ensure content is stacked */
-        max-width: 100%; /* Ensure full width on mobile */
+    .slides > article:target {
+        display: flex; /* Ensure grid display */
+        flex-direction: column;
+        justify-items: center; /* Center image */
+        
     }
-
-    .steps {
-        flex-direction: column; /* Stack the steps vertically on mobile */
+    .slides article img {
+        width:fit-content; /* Adjust width dynamically */
+        max-width: 100%; /* Prevent overflow */
+        height: 80%;
+        display: block; /* Ensure it's visible */
+        align-items: center;
+        margin: 10px;
     }
 }
