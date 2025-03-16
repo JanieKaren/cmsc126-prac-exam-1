@@ -26,6 +26,16 @@ p{
     color: #6a7a84;
 }
 
+main{
+    background-color: white;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid gray; 
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 /*Headers */
 .header-top{
     display: flex;
@@ -146,6 +156,7 @@ p{
     width: 250px; 
     margin-right: 380px;
     border:1px solid gray;
+    
 }
 
 .search-form input {
@@ -167,7 +178,8 @@ p{
 
 /* Sidebar */
 aside.sidebar {
-    width: 250px; 
+    width: 250px;
+    height:100%;
     background-color: #eef8fe;
     position: absolute; 
     left: 0;
@@ -248,30 +260,94 @@ button.close-sidebar {
     font-weight: bold;
 }
 
-.main-container{
-    background-color: white;
-}
-.content {
-    margin-left: 250px;
-    display: flex;
-    flex-direction: row; 
-
-}
 
 /* Sections */
 .left-section, .right-section {
     flex: 1; 
     padding: 0;
     background-color: white;
-    border-top: 1px solid black;
 }
 .right-section{
-    border-left: 1px solid black;
+    border-left: 1px solid gray;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f6f6f6;
 }
 .left-section ul{
-    list-style: none;
     padding: 0;
+}
+
+.bottom-buttons{
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.bottom-buttons button{
+    padding: 4px;
+    border-radius: 5px;
+    border:1px solid #676e70;
+    color:#5f6366;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.post{
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+    align-items: center;
+    padding:10px;
+    border-bottom: 1px solid lightgrey;
+    color: gray;
+}
+.post-title{
+    font-weight: normal;
+    color: #0000ff;
+}
+.title {
+    font-size: medium;
+    font-weight: normal;
+    margin-bottom: 1px;
+    outline: none;
+    margin-right: .4em;
+    padding: 0px;
+    overflow: hidden;
+    unicode-bidi: isolate;
+}
+
+.domain {
+    font-size: small;
+    display: inline;
+    color: gray;
+    
+}
+.domain a{
+    font-weight: normal;
+    color: gray;
+}
+
+.poster{
+    color: blue;
+    font-weight: normal;
+}
+.post-buttons{
+    display: block;
+    padding: 1px 0;
+    margin:0;
+    font-size: small;
+    font-weight: bold;
+}
+
+.post-buttons li{
+    display: inline; /* Makes list items appear in a row */
+    margin-right: 10px; 
+    
+}
+
+.post-buttons a{
+    text-decoration: none;
+    font-weight: bold;
+    color: gray; 
+    
 }
 
 .vote-container {
@@ -306,28 +382,7 @@ button.close-sidebar {
     color:skyblue;
 }
 
-.comment{
-    margin: 0 10px;
-    padding: 10px;
-    display: flex;
-    align-items: top; 
-    gap: 5px;
-}
-.comment a{
-    font-weight: bold;
-    text-decoration: none;
-
-}
-
-.replies{
-    margin-left: 40px;
-    border-left: 2px solid lightgray;
-}
-.replies .comment{
-    padding: 5px 10px;
-    padding-left: 0;
-}
-
+/* Right Section */
 .reddit-post{
     padding:10px;
     margin: 10px;
@@ -335,8 +390,9 @@ button.close-sidebar {
 }
 
 .comments-sections{
-    border-top: 1px solid black; 
+    border-top: 1px solid gray; 
     box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #f6f6f6;
 }
 
 .comment-form {
@@ -355,11 +411,10 @@ button.close-sidebar {
 .comment-form input {
     flex: 1; 
     height: 50px;
-    padding: 10px 0;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 
 .comment-form button {
     width: auto; 
@@ -376,82 +431,51 @@ button.close-sidebar {
     text-align: right;
     margin-right:70px;
     margin-top:10px;
-    font-size: medium;
-}
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-    aside.sidebar {
-        display: none; 
-    }
-    .header-bottom{
-        padding-left: 0;
-    }
-    .content{
-        margin-left: 0;
-    }
-    
-
-}
-.post{
-    display: flex;
-    flex-direction: row; 
-    gap: 10px;
-    align-items: center;
-    margin:  10px 0 10px 0;
-    padding-inline:10px;
-    border-bottom: 1px solid black;
-}
-.post-buttons{
-    display: block;
-    padding: 1px 0;
-    list-style-type: none;
-    margin:0;
     font-size: small;
-    font-weight: bold;
-}
-
-.post-buttons li{
-    display: inline; /* Makes list items appear in a row */
-    margin-right: 10px; 
-    
-}
-
-.post-buttons a{
-    text-decoration: none;
-    font-weight: bold;
-    color: gray; 
-    
-}
-
-.title {
-    font-size: medium;
     font-weight: normal;
-    margin-bottom: 1px;
-    outline: none;
-    margin-right: .4em;
-    padding: 0px;
-    overflow: hidden;
-    unicode-bidi: isolate;
 }
 
-.post-title {
-    text-decoration: none;
+.comment{
+    margin: 0 10px;
+    padding: 10px;
+    display: flex;
+    align-items: top; 
+    gap: 5px;
+}
+.comment a{
     font-weight: bold;
-    color: #0000ff;
+    text-decoration: none;
+
 }
 
-.domain {
+.comment-header{  
     font-size: small;
-    color: gray;
+    color:gray; 
 }
-.domain a {
-    text-decoration: none; /* Removes underline */
-    color: gray; /* Optional: Keeps link gray */
+
+.comment-header .poster{
+    color: #2f68b3; 
+}
+
+a.collapse{
+    font-weight: normal;
+}
+.comment-body p{
+    color:black;
+}
+.comment-body{
+    display: flex;
+    flex-direction: column; 
+    gap: 4px;
+}
+
+.replies{
+    margin-left: 40px;
+    border-left: 2px solid lightgray;
+}
+.replies .comment{
+    padding: 5px 10px;
+    padding-left: 0;
 }
 
 .post-image {
@@ -463,28 +487,12 @@ button.close-sidebar {
     width: 90px;
     height: auto; 
 }
-.poster{
-    text-decoration: none; 
-    font-size: small;
-    font-weight: lighter;
-    color: gray;
-}
-
-.poster a{
-    color: #2f68b3;
-}
-
-
 
 .description{
     display: flex;
-    justify-content: space-between; 
-    
-    
-    
-    
+    justify-content: space-between;     
+    margin-top: 10px; 
 }
-
 .points{
     background-color: white;
     border-radius: 5px;
@@ -512,9 +520,18 @@ button.close-sidebar {
     font-size: small;
 }
 
+@media screen and (max-width: 768px) {
+    aside.sidebar {
+        display: none; 
+    }
+    .header-bottom{
+        padding-left: 0;
+    }
+    .content{
+        margin-left: 0;
+    }
 
-
-
-
+}
+    
 
 
