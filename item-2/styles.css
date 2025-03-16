@@ -5,7 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-
 header{
     display: flex;
     flex-direction: column; 
@@ -13,26 +12,44 @@ header{
     position: relative;
 }
 
+a{
+    text-decoration: none;    
+    color: #2f68b3;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+}
+
+p{
+    font-size: small;
+    color: #6a7a84;
+}
+
+/*Headers */
 .header-top{
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    border-bottom: 2px solid black ;
 }
-.header-left{
-        display: flex;
-        align-items: center;
-    }
-.logo img {
-        width: 100px;  
-        height: auto;
-        margin-top: 2px;
-        margin-left: 5px;
-    }
-
 
 .header-right {
-    font-size: 16px;
+    position: absolute;
+    top: 40px;  
+    right: 20px; 
+    bottom: 0; 
+    display: grid;
+    grid-template-rows: auto 1fr; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5px;
+    justify-content: center; 
+    background-color: #ebedef;
+    border: 1px solid gray ;
+    border-bottom: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header-bottom {
@@ -41,9 +58,52 @@ header{
     justify-content: space-between; 
     align-items: center;
     padding-left: 250px;
+    border-top: 1px solid gray ;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.logo img {
+    width: 120px;  
+    height: auto;
+    margin-top: 2px;
+    margin-left: 5px;
+ }
 
+ /*Header Right */
+.account {
+    grid-column: 1 / -1; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-size: small;
+    color: gray;
+}
+.separator {
+    font-weight: bold;
+}
+.account-buttons {
+    background-color: white;
+    font-size:x-small;
+    width: 100px;
+    height: 30px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid gray ;
+    gap: 5px;
+}
+
+.account-buttons  a{
+    font-weight: bolder;
+    color:black;
+}
+
+ /*Header Bottom */
 .tab-menu ul {
     list-style-type: none;
     white-space: nowrap;
@@ -55,20 +115,26 @@ header{
 .tab-menu ul li {
     display: inline;
     font-weight: bold;
-    margin: 0px 3px;
-    
+    margin: 0 3px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 .tab-menu ul li a {
-    text-decoration: none;
-    color: black;
+    color: #2f68b3;
     background-color: white; 
     padding: 10px;
     display: inline-block;
     border-radius: 5px 5px 0 0;
-    border: 2px solid black ;
+    border: 1px solid gray ;
     font-size: small; 
     font-weight: bold;
+}
+
+.tab-menu ul li.selected a{
+    color: darkorange !important;
+    border-bottom: 1px solid white;
+    box-shadow: 0px 8px 10px rgb(255, 255, 255);
 }
 
 .search-form {
@@ -76,9 +142,10 @@ header{
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 5px;
     background-color: white;
-    width: 250px; /* Adjust width as needed */
+    width: 250px; 
+    margin-right: 380px;
+    border:1px solid gray;
 }
 
 .search-form input {
@@ -91,30 +158,28 @@ header{
 
 .search-form button {
     background: none;
-    border: none;
     cursor: pointer;
     font-size: 16px;
+    border: none; 
+    border-left: 1px solid gray; 
+    padding: 4px; 
 }
 
-
-/* SIDEBAR */
+/* Sidebar */
 aside.sidebar {
     width: 250px; 
-    height: 100vh;
     background-color: #eef8fe;
-    position: fixed; /* Fix sidebar to left */
+    position: absolute; 
     left: 0;
-    top: 0;
-    margin-top: 50px;
-    align-items: left;
-    border: 2px solid black; 
+    top: 90px; 
+    border: 2px solid gray; 
+    border-left: none;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-/* Close button on the rightmost side */
-#close-btn {
+button.close-sidebar {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -122,35 +187,66 @@ aside.sidebar {
     background: none;
     border: none;
     cursor: pointer;
-    color: black;
+    color: gray;
     padding-right: 5px;
 }
-
-/* SIDEBAR LINKS */
 .sidebar ul {
     list-style: none;
-    padding: 0px 20px 0px 20px;
-    
+    margin-top: 10px;
 }
 
 .sidebar li {
     color: #676e70;
-    margin: 10px;
+    padding: 5px 20px;
 }
 
 .sidebar a {
-    color: black;
+    color: #5f6366;
     text-decoration: none;
     display: block;
     font-size: 16px;
+    text-transform: uppercase;
+}  
+
+.sidebar ul li.more a{
+    color: #2f68b3;
+}
+.sidebar ul li.selected{
+    background-color: white;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.sidebar ul li.selected a{
+    color: darkorange !important;
+}
+
+.siderbar-bottom {
+    padding-right:20px;
+}
+
+.sidebar-sections{
+    background-color: #ddedfe;
+    border:1px solid gray;
+    border-left: none;
+    margin-block:10px;
+    padding:10px 20px;
+}
+
+.sidebar-sections a{
+    color: #2f68b3;
+    font-weight: bold;
     text-transform: capitalize;
-    
+}
+.ad img{
+   width: 100%;
+   height:auto;
 }
 
-.sidebar li:hover {
-    background-color: #d0e4fc;
+.ad{
+    text-align: right;
+    font-weight: bold;
 }
-
 
 .main-container{
     background-color: white;
@@ -167,9 +263,11 @@ aside.sidebar {
     flex: 1; 
     padding: 0;
     background-color: white;
-    border: 1px solid black;
-    border-left:none;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid black;
+}
+.right-section{
+    border-left: 1px solid black;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .left-section ul{
     list-style: none;
@@ -190,6 +288,7 @@ aside.sidebar {
     cursor: pointer;
     padding: 0;
     transition: color 0.2s ease;
+    color: gray
 }
 
 .vote-count {
@@ -199,9 +298,89 @@ aside.sidebar {
     margin: 5px 0;
 }
 
-.upvote, .downvote, .rank {
+.upvoted{
+    color:orange;
+}
+
+.downvoted{
+    color:skyblue;
+}
+
+.comment{
+    margin: 0 10px;
+    padding: 10px;
+    display: flex;
+    align-items: top; 
+    gap: 5px;
+}
+.comment a{
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.replies{
+    margin-left: 40px;
+    border-left: 2px solid lightgray;
+}
+.replies .comment{
+    padding: 5px 10px;
+    padding-left: 0;
+}
+
+.reddit-post{
+    padding:10px;
+    margin: 10px;
     color: gray;
 }
+
+.comments-sections{
+    border-top: 1px solid black; 
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.comment-form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.comment-form input {
+    flex: 1; 
+    height: 50px;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.comment-form button {
+    width: auto; 
+    padding: 0 5px; 
+    margin-right: 20px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.comment-form a{
+    text-align: right;
+    margin-right:70px;
+    margin-top:10px;
+    font-size: medium;
+}
+
+
+
 
 
 
@@ -249,12 +428,6 @@ aside.sidebar {
     
 }
 
-
-.sumbission p, .sumbission a {
-    font-size: small;
-    font-weight: lighter;
-}
-
 .title {
     font-size: medium;
     font-weight: normal;
@@ -288,19 +461,55 @@ aside.sidebar {
 
 .post-image img {
     width: 90px;
-    height: auto; /* Keeps aspect ratio */
+    height: auto; 
+}
+.poster{
+    text-decoration: none; 
+    font-size: small;
+    font-weight: lighter;
+    color: gray;
+}
+
+.poster a{
+    color: #2f68b3;
 }
 
 
 
-
-.sumbission p, .sumbission a {
-    display: inline;
-
-}
-
-ul{
+.description{
+    display: flex;
+    justify-content: space-between; 
     
+    
+    
+    
+}
+
+.points{
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    align-items: flex-end;
+    font-size: small;
+}
+
+.points-text{
+    font-weight: bold;
+}
+
+.points-number{
+    font-weight: bold;
+    font-size: large;
+}
+
+.percentage{
+    display: inline-block; 
+}
+
+.link{
+    font-size: small;
 }
 
 
