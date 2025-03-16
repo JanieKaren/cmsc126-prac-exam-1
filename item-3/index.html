@@ -6,6 +6,7 @@
     <title>Let's Cook</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -25,7 +26,6 @@
         <section class="guide-container">
             <h2>────୨ৎ──── Steps ────୨ৎ────</h2>
             <nav class="slider" aria-label="Recipe Steps Navigation">
-                <button class="prev" aria-label="Previous Step" disabled>&#10094;</button> 
                 <a href="#slide-1">1</a>
                 <a href="#slide-2">2</a>
                 <a href="#slide-3">3</a>
@@ -33,8 +33,6 @@
                 <a href="#slide-5">5</a>
                 <a href="#slide-6">6</a>
                 <a href="#slide-7">7</a>
-                <button class="next" aria-label="Next Step">&#10095;</button> 
-                <button class="restart" aria-label="Restart">&#8634;</button> 
             </nav>
             <div class="slides">
                 <article id="slide-1">
@@ -70,15 +68,43 @@
                         </li>
                       </ul>
                       
-                    
+                      <div class="container_buttons">
+                        
+                        <div class="buttons">
+                            <a href="#slide-2" class="next" aria-label="Next Step">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                   </div>
+
                 </article>
 
-                <article id="slide-2">
+                <article id="slide-2">s
                     
                         <img src="assets/creamy-leche-flan-step-1.jpg" alt="Step 1">
                     
                     <h4 class="title">Step 2: Make Caramel</h4>
                     <p class="description">In a saucepan, add granulated sugar and water. Cook on medium low until you get a light golden caramel, about 5 minutes (mine is a bit darker because I like the burnt caramel flavor haha!). Immediately pour into llanera/baking mold, making sure to evenly coat the bottom. The caramel will harden within the next few minutes.</p>
+                    
+                   <div class="container_buttons">
+                        <div class="buttons">
+                            <a href="#slide-1" class="prev" aria-label="Previous Step">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-1" class="restart" aria-label="Restart">
+                                <i class="fas fa-redo"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-3" class="next" aria-label="Next Step">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                   </div>
+                    
+                
                 </article>
                 <article id="slide-3">
                     
@@ -86,6 +112,24 @@
                     
                     <h4 class="title">Step 3: Mix Ingredients</h4>
                     <p class="description">In a bowl, whisk together eggs, condensed milk, evaporated milk, and vanilla extract until smooth.</p>
+                    <div class="container_buttons">
+                        <div class="buttons">
+                            <a href="#slide-2" class="prev" aria-label="Previous Step">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-1" class="restart" aria-label="Restart">
+                                <i class="fas fa-redo"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-4" class="next" aria-label="Next Step">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                   </div>
+                
                 </article>
                 <article id="slide-4">
                     
@@ -93,6 +137,25 @@
                     
                     <h4 class="title">Step 4: Pour Mixture into Baking Dish</h4>
                     <p class="description">Pour flan batter through a sieve into the llanera to get rid of any eggy streaks. Lightly cover with lid (do not lock it so it’s easier to remove & check the flan for doneness) or aluminum foil.</p>
+                    
+                    <div class="container_buttons">
+                        <div class="buttons">
+                            <a href="#slide-3" class="prev" aria-label="Previous Step">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-1" class="restart" aria-label="Restart">
+                                <i class="fas fa-redo"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-5" class="next" aria-label="Next Step">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                   </div>
+
                 </article>
                 <article id="slide-5">
                     
@@ -107,6 +170,25 @@
                         <li>When touched with a finger, it shouldn’t stick</li>
                         <li>A toothpick inserted in the middle should come out clean</li>
                     </ol>
+
+                    <div class="container_buttons">
+                        <div class="buttons">
+                            <a href="#slide-4" class="prev" aria-label="Previous Step">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-1" class="restart" aria-label="Restart">
+                                <i class="fas fa-redo"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-6" class="next" aria-label="Next Step">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                   </div>
+
                 </article>
                 <article id="slide-6">
                     
@@ -114,6 +196,25 @@
                     
                     <h4 class="title">Step 6: Let it Cool Down</h4>
                     <p class="description">Cool uncovered at room temperature for 30-45 minutes, then lightly cover and chill in the fridge for at least 3 hours until fully set. Uncover llanera and use offset spatula to loosen up the sides.</p>
+                    
+                    <div class="container_buttons">
+                        <div class="buttons">
+                            <a href="#slide-5" class="prev" aria-label="Previous Step">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-1" class="restart" aria-label="Restart">
+                                <i class="fas fa-redo"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-7" class="next" aria-label="Next Step">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                   </div>
+
                 </article>
                 <article id="slide-7">
                     
@@ -121,6 +222,21 @@
                     
                     <h4 class="title">Step 7: Serve & Enjoy!</h4>
                     <p class="description">Place a rimmed plate (to catch all the caramel) on top of the llanera and flip upside down. Tap the llanera and gently shake until flan comes out, and enjoy!</p>
+                    
+                    <div class="container_buttons">
+                        <div class="buttons">
+                            <a href="#slide-6" class="prev" aria-label="Previous Step">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#slide-1" class="restart" aria-label="Restart">
+                                <i class="fas fa-redo"></i>
+                            </a>
+                        </div>
+                        
+                   </div>
+
                 </article>
             </div>
         </section>
