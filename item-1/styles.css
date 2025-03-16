@@ -71,6 +71,7 @@ header{
     text-decoration: underline;
 }
 
+
 .news-content{
     padding: 15px;
 }
@@ -101,6 +102,12 @@ header{
 
 .sidebar ul li a {
     display: block;
+}
+
+
+.sidebar ul li a:hover {
+    color: #005bb5; 
+    text-decoration: underline;
 }
 
 .sidebar h2 {
